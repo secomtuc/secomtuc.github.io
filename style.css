@@ -144,10 +144,7 @@ table {
   cursor: pointer;
 }
 
-.event-card:hover {
-  background-color: #e0e7ff;
-  /* indigo-100 */
-}
+
 
 .fade-in {
   animation: fadeIn 0.4s ease-in;
@@ -176,7 +173,7 @@ table {
 
 /* Modal container */
 #modal {
-  background-color: white;
+  background-color: rgba(0, 0, 0, 0.5);
   border-radius: 0.5rem;
   max-width: 90vw;
   max-height: 90vh;

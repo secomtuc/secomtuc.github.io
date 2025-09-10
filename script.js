@@ -6,9 +6,8 @@ const eventsData = {
         title: "Desfile 7 de Setembro",
         date: "07 Set",
         desc: "Desfile cívico do 7 de setembro. Senha de Acesso: 1234",
-        img: "https://placehold.co/300x200?text=Desfile+7+de+Setembro",
         alt: "Desfile cívico com pessoas marchando",
-        link: "https://1024terabox.com/s/1YKTN-JbLh9QL3O11tB03nw",
+        link: "https://1024terabox.com/s/1mcQkofbeu55SwfUaNCMAzQ",
       },
     ]
   },
@@ -48,15 +47,14 @@ function generateMonthCards() {
     if (yearEvents[monthNumber] && yearEvents[monthNumber].length > 0) {
       const monthCard = document.createElement("div");
       monthCard.className =
-        "month-card bg-white rounded-lg shadow-md p-6 cursor-pointer hover:bg-indigo-50";
+        "month-card bg-[#C1D523] rounded-lg shadow-md p-6 cursor-pointer";
       monthCard.setAttribute("data-month", monthNumber);
       monthCard.setAttribute("tabindex", "0");
       monthCard.setAttribute("role", "button");
       monthCard.setAttribute("aria-pressed", "false");
       monthCard.innerHTML = `
-            <img src="https://placehold.co/300x200?text=${monthNames[i]}" alt="Imagem representando o mês de ${monthNames[i]}" class="w-full h-32 object-cover rounded-md mb-4" />
-            <h3 class="text-xl font-semibold text-center text-gray-800">${monthNames[i]}</h3>
-            <p class="text-center text-gray-600 mt-2">Clique para ver eventos</p>
+            <img src="https://placehold.co/300x200/transparent/white?text=${monthNames[i]}" alt="Imagem representando o mês de ${monthNames[i]}" class="w-full h-32 object-cover rounded-md mb-4" />
+            <p class="text-center text-white mt-2">Clique para ver eventos</p>
           `;
       monthCard.addEventListener("click", () => {
         showEventsModal(selectedYear, monthNumber);
@@ -93,13 +91,12 @@ function showEventsModal(year, month) {
     events.forEach((event) => {
       const eventCard = document.createElement("div");
       eventCard.className =
-        "event-card bg-white rounded-lg shadow-md p-4 flex flex-col";
+        "event-card bg-[#C1D523] rounded-lg shadow-md p-4 flex flex-col";
       eventCard.title = "Clique para abrir o link do evento";
       eventCard.innerHTML = `
-            <img src="${event.img}" alt="${event.alt}" class="w-full h-40 object-cover rounded-md mb-3" />
-            <h4 class="text-lg font-semibold text-gray-800">${event.title}</h4>
-            <p class="text-sm text-indigo-600 mt-1">${event.date}</p>
-            <p class="text-gray-600 mt-2 flex-grow">${event.desc}</p>
+            <h4 class="text-lg font-semibold text-white">${event.title}</h4>
+            <p class="text-sm font-bold text-indigo-600 mt-1">${event.date}</p>
+            <p class="text-white mt-2 flex-grow">${event.desc}</p>
           `;
       eventCard.addEventListener("click", () => {
         if (event.link) {

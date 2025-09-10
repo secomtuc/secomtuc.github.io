@@ -7,7 +7,7 @@ const eventsData = {
         date: "07 Set",
         desc: "Desfile cívico do 7 de setembro. Senha de Acesso: 1234",
         alt: "Desfile cívico com pessoas marchando",
-        link: "https://1024terabox.com/s/1mcQkofbeu55SwfUaNCMAzQ",
+        link: "https://www.amazon.com/photos/shared/OuShFq8zQ-WecnYOwOtyKw.H3iRYZN7QIJeyQfnUyOWRK",
       },
     ]
   },
